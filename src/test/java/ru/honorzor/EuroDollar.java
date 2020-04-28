@@ -7,7 +7,6 @@ import google.GoogleSearchResult;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class EuroDollar {
@@ -22,7 +21,7 @@ public class EuroDollar {
 
         Assert.assertTrue(list.results().toString().contains(EXCEPTEDLINK));
 
-        $(".r > a").click();
+        list.click();
 
         BankSite page = page(BankSite.class);
 
